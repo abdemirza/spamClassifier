@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+    <title>Email Classification</title>
+  </head>
+  <body>
+    <form action="/ " method="POST">
+      <div class="container-fluid bg-light py-3 m-5">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card card-body">
+              <h3 class="text-center mb-4">Spam Classifier</h3>
+             <% if (result==1){ %>
+              <div class="alert alert-danger">
+                
+                <a class="close font-weight-light" data-dismiss="alert" href="#"
+                  >×</a
+                >Spam
+              </div>
+            <% } else if(result==0){ %>
+              <div class="alert alert-success">
+                <a class="close font-weight-light" data-dismiss="alert" href="#"
+                  >×</a
+                >Not a Spam message.
+              </div>
+              <% } %>
+              <fieldset>
+                <div class="form-group has-error">
+                  <input
+                    class="form-control input-lg"
+                    placeholder="Input your email to check"
+                    name="email"
+                    type="text"
+                  />
+                </div>
+
+                <input
+                  class="btn btn-lg btn-primary btn-block"
+                  value="Check"
+                  type="submit"
+                />
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
